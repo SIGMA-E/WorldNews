@@ -50,8 +50,8 @@ author_max = Author.objects.get(id=2)
 
 # внесем посты в таблицу модели "Post" под создаммыми авторами:
 Post.objects.create(type_post='ar', title='Заголовок поста №1', text_post='Содержание поста №1', author=author_alex)
-Post.objects.create(type_post='ar', title='Заголовок поста №2', text_post='Содержание поста №2', aurhor=author_max)
-Post.objects.create(type_post='nw', title='Заголовок поста №3', text_post='Содержание поста №3', aurhor=author_max)
+Post.objects.create(type_post='ar', title='Заголовок поста №2', text_post='Содержание поста №2', author=author_max)
+Post.objects.create(type_post='nw', title='Заголовок поста №3', text_post='Содержание поста №3', author=author_max)
 
 # проверим внесенные посты по "id", "title":
 Post.objects.all().values('id', 'title')
